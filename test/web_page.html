@@ -1,0 +1,85 @@
+<!-- This page contain code regarding desinging static webpage,
+     External css file:Style.css
+     
+     Problem Definitions for Responsive Web Development.
+	
+		1. Responsive Web Development Practical. Create web page as given at image(rwd.png) file attached.
+		2. Menu links shold be toggle in mobile devices as per attached image (rwd_mobile.png).
+             
+-->
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+
+<!--external css -->
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<!--js function for resposive menu-->
+<script>
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+<head>
+<body>
+
+<!--Header started from here-->
+<div id="main-container">
+
+<div style="overflow:auto"> 		
+ <div id="header">
+	<h1>Responsive web design</h1>
+	<h4>web designers & web developers</h4>      
+
+
+<!--Nevigation menu-->
+
+<div class="topnav" id="myTopnav">
+		   <a href="#home" class="active">Nav Link 1</a>
+		   <a href="#news">Nav Link 2</a>
+		   <a href="#contact">Nav Link 3</a>
+		   <a href="#about">Nav Link 4</a>
+		   <a href="#about">Nav Link 5</a>
+		   <a href="#about">Nav Link 6</a>
+           <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  
+ </div>
+</div>
+
+<!--Body container started from here,which include paragradh and sidebar-->
+<div id="body-container">
+	<div class="text_container">
+		<h3 style="color:black;">What is Lorem Ipsum?</h3>
+		<p>  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+		     ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not 
+		     only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+		     release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+		     including versions of Lorem Ipsum.</p>
+		 <p style="color:red;"><b>Resize your browser window or check with mobile device</b></p>	
+    </div>
+   
+   <div class="sidebar">
+		<h3>Sidebar Links</h3>
+		<ul>
+			<li><a href="#home">Link 1</a></li>
+			<li><a href="#books">Link 2</a></li>
+			<li><a href="#blog">Link 3</a></li>
+		</ul>	
+   </div>
+  </div>
+ </div>	       
+  
+<!--Declare footer -->
+     <div class="footer">
+	    <p>Copyright 2018 svaapta</p> 
+	 </div>   
+ </div>
+</body>
+</html>
